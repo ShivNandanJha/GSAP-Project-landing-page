@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="pathTo/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    
+    <title>GSAP_Project</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left"></div>
+      <div class="right"></div>
+      <nav class="nav">
+        <ul>
+          <li class="logo"><span class="material-symbols-outlined">
+            <h3>Upplash</h3>  monochrome_photos
+            </span></li>
+          <li class="menu"><i class="fa fa-bars"></i></li>
+          <li class="collection">Collection</li>
+          <li class="explore">Explore</li>
+          <li class="search"><span class="material-symbols-outlined">
+            Search
+            </span></li>
+          <li class="profile">
+            <div class="img"></div>
+          </li>
+        </ul>
+      </nav>
+      <div class="content">
+        <div class="img-wrapper">
+          <div class="karina"></div>
+        </div>
+        <div class="info">
+          <ul>
+            <li>upplash.com</li>
+            <li>@karinawills</li>
+            <li>katrinawills.com</li>
+            <li><span class="material-symbols-outlined">
+                share
+                </span></li>
+        
+          </ul>
+        </div>
+        <div class="text">
+          <h1>Karina Wills</h1>
+          <p>Fashion photographer</p>
+        </div>
+        <div class="name">Karina Wills</div>
+        <div class="bottom">
+          <ul>
+            <li><span class="material-symbols-outlined">
+             face Profile
+                </span></li>
+            <li><span class="material-symbols-outlined">
+                perm_media Portfolio
+                </span></li>
+            <li><span class="material-symbols-outlined">
+                contact_phone Contact
+                </span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="js/TweenMax.js"></script>
+    <script src="js/Draggable.js"></script>
+    <script src="js/ThrowPropsPlugin.js"></script>
+    <script src="js/default.js"></script>
+    <script>
+      
+      TweenMax.to('.left', 2, {
+        delay: .8,
+        width: "50%",
+        ease: Power2.easeInOut,
+      });
+      TweenMax.to(".right", 2, {
+        delay: .6,
+        width: "50%",
+        ease: Power3.easeInOut,
+      });
+      TweenMax.from('.nav', 2, {
+        delay: .8,
+        opacity: 0,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from('.text h1', 2, {
+        delay: .6,
+        x: 1000,
+        ease: Circ.easeInOut,
+      });
+      
+      TweenMax.from('.text p', 2, {
+        delay: .7,
+        x: 1000,
+        ease: Circ.easeInOut,
+      });
+      TweenMax.to('.karina', 2, {
+        delay: 1.5,
+        width:'800px',
+        ease: Power2.easeInOut,
+      });
+      TweenMax.staggerFrom(".bottom ul li", 2, {
+        delay: 1,
+        x:1000,
+        ease: Circ.easeInOut,
+      },0.08);
+      TweenMax.from(".info", 2, {
+        delay: 1.5,
+        y:100,
+        ease: Circ.easeInOut,
+      });
+      TweenMax.from(".name", 2, {
+        delay: 1.5,
+        x:-600,
+        ease: Circ.easeInOut,
+      });
+    </script>
+  </body>
+</html>
